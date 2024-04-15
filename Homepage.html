@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('./stck2.jpeg');
+            background-repeat: no-repeat;
+            background-size:cover ;
+        }
+      
+        #md{
+            border: 1px solid white;
+            box-shadow: 0px 0px 5px 2px white;
+            display: grid;
+           justify-content: center;
+           row-gap:25px;
+           width:20%;
+           margin-left: 33%;
+           padding:50px;
+           margin-top:200px
+
+        }
+        #in1,#in2{
+            border-radius: 5px;
+            font-size: 15px;
+            width:200px;
+            padding: 5px;
+            border-radius: 10px;;
+            
+        }
+        
+        #btn1{
+            width:40%;
+            color:white;
+            font-size: 15px;
+            margin-left:25%;
+            border-radius: 10px;
+            /* background-color: white; */
+            /* color: black; */
+            border: 2px solid white;
+            background-color: Transparent
+        }
+        #btn1:hover{
+            background-color: #e7e7e7;
+            color:black;
+        }
+        #r1{
+            color:white;
+            margin-left: 30%;
+            font-size: 15px;
+            margin-top:-10px;
+        }
+        #an2{
+            color:white;
+            margin-left:32%;
+            margin-top:-7%;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        // frst_div.setAttribute("class","card")
+
+
+        var frst_div=document.createElement("div")
+        document.body.appendChild(frst_div)
+        frst_div.setAttribute("id","md")
+        
+        var ip1=document.createElement("input")
+        frst_div.appendChild(ip1)
+        ip1.setAttribute("id","in1")
+        ip1.placeholder="Enter UserName"
+  
+        var ip2=document.createElement("input")
+        frst_div.appendChild(ip2)
+        ip2.setAttribute("id","in2")
+        ip2.placeholder="Enter password"
+
+        var sub=document.createElement("button")
+        frst_div.appendChild(sub)
+        sub.setAttribute("id","btn1")
+        sub.innerText="Login"
+        
+        var a1=document.createElement("a")
+        sub.appendChild(a1)
+        a1.setAttribute("id","an1")
+        a1.setAttribute("href","./Welcome.html")
+
+        sub.addEventListener("click", function() {
+        window.location.href = a1.getAttribute("href");
+        });
+
+        var a2=document.createElement("a")
+        frst_div.appendChild(a2)
+        a2.setAttribute("id","an2")
+        a2.innerText="register"
+        a2.setAttribute("href","./Register.html")
+
+
+
+    </script>
+</body>
+</html>

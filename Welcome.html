@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("./s3.jpg");
+            background-size: cover;
+            
+            }
+        
+        #d1{
+            float:inline-end;
+            margin:30px;
+            /* margin-top:20px; */
+        }
+        
+        #anc{
+            text-decoration: none;
+            color:white;
+            border:1px solid white;
+            padding:10px;
+            border-radius: 10px;
+            margin-left:10px;
+        }
+        #anc:hover{
+            box-shadow:0px 0px 5px 5px white;
+            background-color: white;
+            color:black;
+        }
+        #An{
+            text-decoration: none;
+            color:white;
+            border:1px solid white;
+            padding:10px;
+            border-radius: 10px;
+            margin-left:20px
+        }
+        #An:hover{
+            box-shadow:0px 0px 5px 5px white;
+            background-color: white;
+            color:black;
+        }
+        #hd{
+            color:white;
+            font-size:600%;
+            position: relative;
+            left:290px;
+            top:130px;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var div1=document.createElement("div")
+        document.body.appendChild(div1)
+        div1.setAttribute("id","d1")
+
+        var trans=document.createElement("div")
+        document.body.appendChild(trans)
+        trans.setAttribute("id","ts")
+        
+        
+        var an=document.createElement("a")
+        div1.appendChild(an)
+        an.innerText="Login"
+        an.setAttribute("id","anc")
+        an.setAttribute("href","./Homepage.html")
+
+
+        var an1=document.createElement("a")
+        div1.appendChild(an1)
+        an1.innerText="View Coins"
+        an1.setAttribute("id","An")
+        an1.setAttribute("href","./dummy.html")
+
+        var head=document.createElement("p")
+        document.body.appendChild(head)
+        head.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;WELCOME TO CRYPTOCURRENCY"
+        head.setAttribute("id","hd")
+    </script>
+</body>
+</html>

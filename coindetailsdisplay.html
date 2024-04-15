@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("s1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .md {
+        display: flex;
+        /* gap:px; */
+      }
+      .igdiv,
+      .s_div {
+        /* border:1px solid black; */
+        color: white;
+        width: 50%;
+        padding: 5% 10% 3% 10%;
+      }
+      #imgg {
+        width: 20%;
+        margin-left: 20%;
+      }
+      .cur {
+        display: flex;
+        /* column-gap:5%; */
+        justify-content: space-around;
+        /* margin-left:40px; */
+        /* border:1px solid black; */
+      }
+      .cur > div {
+        border: 5px solid black;
+        /* box-shadow: 10px 10px 2px 2px; */
+        width: 25%;
+        height: 250px;
+        text-align: center;
+        color:white;
+        /* padding:10px; */
+        margin-top: 5%;
+        background-color: rgba(0,0,0,0.7);
+        border-radius: 10px;
+      }
+      .cur > div:hover{
+        scale:103%;
+        box-shadow:0px 0px 5px 5px white;
+      }
+      .rem {
+        color: red;
+      }
+      .btns{
+        margin-left:15px;
+        padding:10px;
+        width:20%;
+        border-radius: 10px;
+      }
+      .btns1{
+margin-left:20px;
+padding:10px;
+width:20%;
+border-radius: 10px;
+      }
+      .btns:hover,.btns1:hover{
+        background-color: rgba(0,0,0,0.1);
+        color:white;
+        box-shadow: 0px 0px 3px 3px black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var aa = window.localStorage.getItem("overalldata");
+      var b = JSON.parse(aa);
+      console.log(b);
+
+      var currency = ["AUD", "USD", "INR"];
+      var mk = [b.market];
+      var a = document.createElement("div");
+      document.body.appendChild(a);
+      a.setAttribute("class", "md");
+
+      var a1 = document.createElement("div");
+      a.appendChild(a1);
+      a1.setAttribute("class", "igdiv");
+
+      var img1 = document.createElement("img");
+      a1.appendChild(img1);
+      img1.setAttribute("src", b["image"]["small"]);
+      img1.setAttribute("id", "imgg");
+
+      var n_div = document.createElement("div");
+      a.appendChild(n_div);
+      n_div.setAttribute("class", "s_div");
+
+      var nam = document.createElement("h1");
+      n_div.appendChild(nam); //id
+      nam.setAttribute("class", "nm");
+      nam.innerHTML = "ID: " + b["id"];
+
+      var name2 = document.createElement("h3");
+      n_div.appendChild(name2); //name
+      name2.setAttribute("class", "nm1");
+      // name2.style.color="red"
+      name2.innerHTML = "Name: " + b["name"];
+
+      var currency = document.createElement("div");
+      document.body.appendChild(currency);
+      currency.setAttribute("class", "cur");
+
+      var currency1 = document.createElement("div");
+      currency.appendChild(currency1);
+
+      var hh = document.createElement("h2");
+      currency1.appendChild(hh);
+      hh.innerText = "Australia";
+      hh.setAttribute("class", "rem");
+      1;
+      var aus = document.createElement("h3");
+      currency1.appendChild(aus);
+      aus.innerHTML =
+        "Current Price: " + b["market_data"]["current_price"]["aud"] + `&#36;`;
+
+      var aus1 = document.createElement("h3");
+      currency1.appendChild(aus1);
+      aus1.innerText = "Market cap: " + b["market_data"]["market_cap"]["aud"];
+
+      var aus2 = document.createElement("h3");
+      currency1.appendChild(aus2);
+      aus2.innerText =
+        "Total volume: " + b["market_data"]["total_volume"]["aud"];
+
+        var btn=document.createElement("button")
+        currency1.appendChild(btn)
+        btn.innerText="Buy"
+        btn.setAttribute("class","btns")
+
+        var btn1=document.createElement("button")
+        currency1.appendChild(btn1)
+        btn1.innerText="Sell"
+        btn1.setAttribute("class","btns1")
+
+        btn.addEventListener("click",()=>{
+            window.alert("Webpage is under Construction")
+        });
+        btn1.addEventListener("click",()=>{
+            window.alert("Webpage is under Construction")
+        });
+        
+      var currency2 = document.createElement("div");
+      currency.appendChild(currency2);
+      // currency2.setAttribute("class","rem")
+
+      var hh1 = document.createElement("h2");
+      currency2.appendChild(hh1);
+      hh1.innerText = "India";
+      hh1.setAttribute("class", "rem");
+
+      var doll = document.createElement("h3");
+      currency2.appendChild(doll);
+      doll.innerHTML =
+        "Current Price: " +
+        b["market_data"]["current_price"]["inr"] +
+        `&#8377;`;
+
+      var doll1 = document.createElement("h3");
+      currency2.appendChild(doll1);
+      doll1.innerText = "Market cap: " + b["market_data"]["market_cap"]["inr"];
+
+      var doll2 = document.createElement("h3");
+      currency2.appendChild(doll2);
+      doll2.innerText =
+        "Total volume: " + b["market_data"]["total_volume"]["inr"];
+
+        var btn=document.createElement("button")
+        currency2.appendChild(btn)
+        btn.innerText="Buy"
+        btn.setAttribute("class","btns")
+
+        var btn1=document.createElement("button")
+        currency2.appendChild(btn1)
+        btn1.innerText="Sell"
+        btn1.setAttribute("class","btns1")
+
+
+        btn.addEventListener("click",()=>{
+            window.alert("Webpage is under Construction")
+        });
+        btn1.addEventListener("click",()=>{
+            window.alert("Webpage is under Construction")
+        });
+
+
+      var currency3 = document.createElement("div");
+      currency.appendChild(currency3);
+      // currency3.setAttribute("class","rem")
+
+      var hh2 = document.createElement("h2");
+      currency3.appendChild(hh2);
+      hh2.innerText = "Europe";
+      hh2.setAttribute("class", "rem");
+
+      var rup = document.createElement("h3");
+      currency3.appendChild(rup);
+      rup.innerHTML =
+        "Current Price: " + b["market_data"]["current_price"]["eur"] + `&euro;`;
+
+      var rup1 = document.createElement("h3");
+      currency3.appendChild(rup1);
+      rup1.innerText = "Market cap: " + b["market_data"]["market_cap"]["eur"];
+
+      var rup2 = document.createElement("h3");
+      currency3.appendChild(rup2);
+      rup2.innerText =
+        "Total volume: " + b["market_data"]["total_volume"]["eur"];
+
+        var btn=document.createElement("button")
+        currency3.appendChild(btn)
+        btn.innerText="Buy"
+        btn.setAttribute("class","btns")
+
+        var btn1=document.createElement("button")
+        currency3.appendChild(btn1)
+        btn1.innerText="Sell"
+        btn1.setAttribute("class","btns1")
+
+        btn.addEventListener("click",()=>{
+            window.alert("Webpage is under Construction")
+        });
+        btn1.addEventListener("click",()=>{
+            window.alert("Webpage is under Construction")
+        });
+
+
+    </script>
+  </body>
+</html>
